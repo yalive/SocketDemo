@@ -23,6 +23,10 @@ io.on('connection', (socket) => {
   });
 });
 
-server.listen(3000, () => {
+process.on('uncaughtException', function (err) {
+    console.log('Caught exception: ' + err);
+});
+
+server.listen(process.env.PORT || 8080, () => {
   console.log('listening on *:3000');
 });

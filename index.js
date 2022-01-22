@@ -29,5 +29,5 @@ process.on('uncaughtException', function (err) {
 
 server.listen(process.env.PORT || 8080, () => {
   var port = process.env.PORT || 8080
-  console.log('listening on *:${port}');
+  console.log(`listening on *:${port}`);
 });
